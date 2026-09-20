@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Bebeb, Dinda 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="hearts"></div>
+
+<!-- PASSWORD -->
+<section id="lockScreen" class="screen">
+  <div class="lock-card">
+    <div class="floating-heart">💗</div>
+    <p class="eyebrow">A little birthday surprise</p>
+    <h1>For My Bebeb</h1>
+    <p>Masukkan tanggal ulang tahunmu untuk membuka hadiah ini.</p>
+    <input id="password" type="password" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY">
+    <button id="openBtn">Open My Gift 💌</button>
+    <p id="error"></p>
+  </div>
+</section>
+
+<main id="content" class="hidden">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">24 • 10 • 2006</span>
+      <div class="hero-heart">♡</div>
+      <h1>Happy Birthday,<br><span>Dinda Puji Ariyanti</span></h1>
+      <p>Untuk bebeb yang mungkin sedang jauh dari aku, tapi selalu punya tempat paling dekat di hati.</p>
+      <button class="primary" onclick="scrollToId('gift')">Start the surprise ↓</button>
+    </div>
+  </section>
+
+  <!-- GIFT -->
+  <section id="gift" class="section center">
+    <span class="eyebrow">01 • A little gift</span>
+    <h2>Something is waiting for you...</h2>
+    <div id="giftBox" class="gift-box" onclick="openGift()">
+      <div class="lid">🎀</div>
+      <div class="box">🎁</div>
+    </div>
+    <p id="giftMessage" class="reveal-text">Klik hadiahnya 💗</p>
+  </section>
+
+  <!-- LETTER -->
+  <section class="section">
+    <div class="letter">
+      <span class="eyebrow">02 • A letter for you</span>
+      <h2>Dear Bebeb,</h2>
+      <p>Selamat ulang tahun, sayangku. Hari ini bukan cuma tentang bertambahnya umur kamu, tapi juga tentang bersyukur karena dunia pernah menghadirkan seseorang seperti kamu.</p>
+      <p>Aku tahu LDR kadang bikin semuanya terasa sedikit lebih sulit. Ada hari ketika kita cuma bisa saling melihat lewat layar, ada momen ketika aku pengin ketemu tapi yang bisa dilakukan cuma menunggu.</p>
+      <p>Tapi sejauh apa pun jaraknya, aku tetap senang karena orang yang ingin aku temui setelah melewati hari yang panjang adalah kamu.</p>
+      <p>Di umur yang baru ini, semoga kamu selalu sehat, bahagia, dimudahkan dalam setiap langkah, dan dikelilingi orang-orang yang menyayangimu. Semoga semua hal baik yang kamu doakan perlahan menemukan jalannya.</p>
+      <p>Terima kasih sudah menjadi bagian dari cerita aku. Kita mungkin belum bisa menghapus jarak sekarang, tapi kita masih bisa terus menulis cerita yang sama.</p>
+      <p class="signature">Love,<br><strong>bebeb ♡</strong></p>
+    </div>
+  </section>
+
+  <!-- REASONS -->
+  <section class="section center">
+    <span class="eyebrow">03 • Little reasons</span>
+    <h2>Why I love you</h2>
+    <div class="reason-card">
+      <div id="reasonNumber">01</div>
+      <div id="reasonText">Cara kamu membuat hari biasa terasa spesial.</div>
+      <button class="secondary" onclick="nextReason()">Next reason →</button>
+    </div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section class="section center">
+    <span class="eyebrow">04 • Our memories</span>
+    <h2>Three little pieces of us.</h2>
+    <div class="gallery">
+      <figure><img src="foto1.jpeg" alt="Memory 1"><figcaption>Memory #01</figcaption></figure>
+      <figure><img src="foto2.jpeg" alt="Memory 2"><figcaption>Memory #02</figcaption></figure>
+      <figure><img src="foto3.jpeg" alt="Memory 3"><figcaption>Memory #03</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- LDR MAP -->
+  <section class="section center">
+    <span class="eyebrow">05 • Even from far away</span>
+    <h2>Malang ↔ Bogor</h2>
+    <div class="map-card">
+      <div class="map-bg">
+        <div class="route"></div>
+        <div class="city malang"><span>📍</span><b>Malang</b><small>Me</small></div>
+        <div class="city bogor"><span>📍</span><b>Bogor</b><small>Dinda</small></div>
+        <div class="distance">≈ 650 km</div>
+        <div class="plane">✈</div>
+      </div>
+      <h3>Jauh di jarak, dekat di hati. 💗</h3>
+      <p>Jarak ini adalah perkiraan garis lurus antarkota, bukan jarak perjalanan kendaraan.</p>
+    </div>
+  </section>
+
+  <!-- LDR MESSAGE -->
+  <section class="section center">
+    <div class="ldr-card">
+      <div class="moon">🌙</div>
+      <span class="eyebrow">06 • Long distance</span>
+      <h2>Two places. One story.</h2>
+      <p>Kalau malam ini kita melihat langit yang sama, berarti sebenarnya kita tidak sejauh itu.</p>
+      <p>Semoga nanti ada hari ketika semua pesan “kapan ketemu?” berubah menjadi “ketemu sekarang.”</p>
+    </div>
+  </section>
+
+  <!-- SECRET -->
+  <section class="section center">
+    <span class="eyebrow">07 • One more thing</span>
+    <h2>Can you find the secret? 🔐</h2>
+    <button class="secret-heart" onclick="openSecret()">♡</button>
+    <p id="secret" class="secret-text hidden">Kalau kamu sampai sini, berarti kamu sudah menemukan satu hal lagi: aku masih memilih kamu. Hari ini, besok, dan di banyak cerita yang belum kita jalani. 💗</p>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="section center">
+    <span class="eyebrow">08 • Our song</span>
+    <h2>A song for us 🎧</h2>
+    <div class="player">
+      <div class="disc">♫</div>
+      <div>
+        <strong>Found You</strong>
+        <small>Kaleb J.</small>
+      </div>
+      <button id="musicBtn">▶</button>
+    </div>
+    <audio id="music" loop>
+      <source src="found-you.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final">
+    <div class="cake">🎂</div>
+    <span class="eyebrow">09 • The end... or maybe not</span>
+    <h2>Happy Birthday, Bebeb! 💗</h2>
+    <p>Semoga ulang tahun ini menjadi awal dari banyak hal baik yang datang untuk kamu.</p>
+    <p class="final-love">I love you, always. ♡</p>
+    <button class="primary" onclick="celebrate()">One last surprise ✨</button>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
